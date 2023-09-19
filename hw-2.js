@@ -1,8 +1,8 @@
 //1
-a=10;
+let a=10;
 alert(a);
 
-a=20;
+let a=20;
 alert(a);
 
 //2
@@ -14,30 +14,21 @@ let nameOfCreator = "Brendan Eich";
 alert(`Имя создателя языка JavaScript ${nameOfCreator}`);
 
 //4
-a=10;
-b=2;
+let a=10;
+let b=2;
 alert(a+b);
-
-a=10;
-b=2;
 alert(a-b);
-
-a=10;
-b=2;
 alert(a*b);
-
-a=10;
-b=2;
 alert(a/b);
 
 //5 Math.pow()-аналог 
-let result=(2 ** 5);
+let result=2 ** 5;
 alert(result);
 
 
 //6
-a=9;
-b=2;
+let a=9;
+let b=2;
 let remainder= a % b;
 alert(remainder);
 
@@ -53,18 +44,49 @@ alert(num);
 
 //8
 let age= Number(prompt('Сколько вам лет?')); 
-alert(33);
+alert(age);
 
-//9
+//9.0
+const user = {
+    name: 'Jack',
+    age: 29,
+    isAdmin: true,
+};
+
+//9.1
+const user = {
+    name: 'Jack',
+    age: 29,
+    isAdmin: true,
+};
+
+user.cityOfResidence = 'London';
+user['cityOfResidence'] = 'London';
+
+//9.2
 const user = {
     name: 'Jack',
     amount: 33,
     isAdmin: true,
 };
 
+user.cityOfResidence = 'London';
+user['cityOfResidence'] = 'London';
+
+//9.3
+const user = {
+    name: 'Jack',
+    amount: 33,
+    isAdmin: true,
+};
+
+//9.4
 let info= prompt('Какую информацию хотите узнать о пользователе?');
-alert(user.name);
+alert(user['name']);
+alert(user['amount']);
+alert(user['isAdmin']);
 
 //10
 let name = prompt('What is your name?');
 alert(`Привет, ${name}!`);
+
