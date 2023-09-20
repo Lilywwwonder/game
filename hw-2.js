@@ -1,8 +1,8 @@
 //1
-let a=10;
+let a = 10;
 alert(a);
 
-let a=20;
+a = 20;
 alert(a);
 
 //2
@@ -14,8 +14,8 @@ let nameOfCreator = "Brendan Eich";
 alert(`Имя создателя языка JavaScript ${nameOfCreator}`);
 
 //4
-let a=10;
-let b=2;
+let first = 10;
+let second = 2;
 alert(a+b);
 alert(a-b);
 alert(a*b);
@@ -27,8 +27,8 @@ alert(result);
 
 
 //6
-let a=9;
-let b=2;
+let one = 9;
+let two = 2;
 let remainder= a % b;
 alert(remainder);
 
@@ -54,23 +54,21 @@ const user = {
 };
 
 //9.1
-const user = {
+user = {
     name: 'Jack',
     age: 29,
     isAdmin: true,
 };
 
-user.cityOfResidence = 'London';
 user['cityOfResidence'] = 'London';
 
 //9.2
-const user = {
+user = {
     name: 'Jack',
     amount: 33,
     isAdmin: true,
 };
 
-user.cityOfResidence = 'London';
 user['cityOfResidence'] = 'London';
 
 //9.3
@@ -80,11 +78,13 @@ const user = {
     isAdmin: true,
 };
 
+user['cityOfResidence'] = 'London';
+delete user.cityOfResidence;
+console.log(user);
+
 //9.4
-let info= prompt('Какую информацию хотите узнать о пользователе?');
-alert(user['name']);
-alert(user['amount']);
-alert(user['isAdmin']);
+let info = prompt('Какую информацию хотите узнать о пользователе?');
+alert(user[info]);
 
 //10
 let name = prompt('What is your name?');
