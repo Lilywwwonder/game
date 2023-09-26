@@ -69,7 +69,7 @@ user = {
     isAdmin: true,
 };
 
-user['cityOfResidence'] = 'London';
+user['city of residence'] = 'London';
 
 //9.3
 const user = {
@@ -78,7 +78,7 @@ const user = {
     isAdmin: true,
 };
 
-user['cityOfResidence'] = 'London';
+user['city of residence'] = 'London';
 delete user.cityOfResidence;
 console.log(user);
 
