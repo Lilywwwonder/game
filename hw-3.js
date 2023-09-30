@@ -1,29 +1,18 @@
 //1
-let password = 'пароль';
+let password = 'flowers';
 let question = prompt('Введите пароль');
 
-if(password === 'пароль') {
-    console.log ('Пароль введен верно');
+if (question == 'flowers') {
+    console.log('Пароль введен верно');
 } else {
-    ('Пароль введен неправильно');
+    console.log('Пароль введен неправильно');
 }
 
 //2
-let c = 10;
-
 //первый вариант
-if (10 > 0) {
-    console.log('Верно');
-} else if (10 < 10) {
-    consol.log('Верно');
-} else {
-    console.log('Неверно');
-}
+let c = 9;
 
-//второй вариант
-let с = 0 && 10 && -3 && 2;
-
-if (10 > 0 && 10 < 10) {
+if (c > 0 && c < 10) {
     console.log('Верно');
 } else {
     console.log('Неверно');
@@ -79,9 +68,14 @@ switch (monthNumber) {
 //6 Done
 
 //7
-let anyNumber = prompt('Пожалуйста, введите любое число');
+let anyNumber = Number(prompt('Пожалуйста, введите любое число'));
 
-console.log(isNaN(anyNumber));
+if (isNaN(anyNumber)) {
+    console.log('Введите число!'); 
+} else {
+    console.log('Добро пожаловать!');
+}
+
 
 if (anyNumber % 2 === 0) {
     alert('Число четное'); 
@@ -125,19 +119,54 @@ if (clientOS == 1) {
 */
 
 
-//9
+//9 основной вариант
+let quest1 = Number(prompt('Укажите вашу ОС: нажмите "1" для Android и нажмите "0" для iOS'));
+let quest2 = Number(prompt('Введите год выпуска вашего телефона'));
+
+if (quest1 === 1 && quest2 >= 2015) { 
+    console.log('Установите версию приложения для Android по ссылке');
+} else if (quest1 === 0 && quest2 >= 2015) {
+    console.log('Установите версию приложения для iOS по ссылке'); 
+} else if (quest1 === 1 && quest2 < 2015) {
+    console.log('Установите облегченную версию для Android по ссылке');
+} else {
+	console.log('Установите облегченную версию для iOS по ссылке');
+}
+
+// вариант с confirm
+let question1 = 'Установите версию приложения для Android по ссылке';
+let question2 = 'Установите версию приложения для iOS по ссылке';
+let question3 = 'Установите облегченную версию для Android по ссылке';
+let question4 = 'Установите облегченную версию для iOS по ссылке';
+
+if (confirm("У Вас Android 2015 года выпуска и позже") == true) {
+    console.log(question1);
+} else if (confirm("У Вас iOS 2015 года выпуска и позже") == true) {
+    console.log(question2); 
+} else if (confirm("У Вас Android ранее 2015 года выпуска") == true) {
+    console.log(question3);
+} else {
+    console.log(question4);
+}
+
+
+//шаблонная строка `some ${value}`: 
+
+/*варинат с confirm частично - переход через шаг и брейк, если не номер
 let question1 = Number(prompt('Укажите вашу ОС: нажмите "1" для Android и нажмите "0" для iOS'));
-let question2 = Number(prompt('Введите год выпуска вашего телефона'));
+let question2 = 'Установите облегченную версию для Android по ссылке';
+let question3 = 'Установите облегченную версию для iOS по ссылке';
 
 if (question1 === 1 && question2 >= 2015) { 
     console.log('Установите версию приложения для Android по ссылке');
 } else if (question1 === 0 && question2 >= 2015) {
     console.log('Установите версию приложения для iOS по ссылке'); 
-} else if (question1 === 1 && question2 < 2015) {
-    console.log('android');
+} else if (confirm("У Вас Android ранее 2015 года выпуска") == true) {
+    console.log(question2);
 } else {
-		console.log('ios');
+    console.log(question3);
 }
+*/
 
 /* вариант первый === КАК СДЕЛАТЬ ПРАВИЛЬНО???
 let question1 = Number(prompt('Укажите вашу ОС: нажмите "1" для Android и нажмите "0" для iOS'));

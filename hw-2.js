@@ -79,7 +79,7 @@ const user = {
 };
 
 user['city of residence'] = 'London';
-delete user.cityOfResidence;
+delete user['city of residence'] 
 console.log(user);
 
 //9.4
