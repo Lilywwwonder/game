@@ -2,7 +2,7 @@
 let password = 'flowers';
 let question = prompt('Введите пароль');
 
-if (question == 'flowers') {
+if (question === password) {
     console.log('Пароль введен верно');
 } else {
     console.log('Пароль введен неправильно');
@@ -77,11 +77,14 @@ if (isNaN(anyNumber)) {
 }
 
 
-if (anyNumber % 2 === 0) {
+if (isNaN(anyNumber)) {
+    console.log('Введите число!');
+} else if (anyNumber % 2 === 0) {
     alert('Число четное'); 
-    } else {
+} else {
         alert('Число нечетное');
-    }
+}
+
 
 //8 первый вариант === number
 let clientOS = Number(prompt('Укажите вашу ОС: нажмите "1" для Android и нажмите "0" для iOS'));
@@ -92,6 +95,15 @@ if (clientOS === 1) {
     console.log('Установите версию приложения для iOS по ссылке');
 } else {
     console.log('OC не поддерживается');
+}
+
+//8 вариант с confirm
+let clientOS1 = confirm('Тип OC Вашего телефона Android?');
+
+if (clientOS1) {
+    console.log('Установите версию приложения для Android по ссылке');
+} else {
+    console.log('Установите версию приложения для iOS по ссылке');
 }
 
 /*8 второй вариант ===
@@ -139,34 +151,73 @@ let question2 = 'Установите версию приложения для i
 let question3 = 'Установите облегченную версию для Android по ссылке';
 let question4 = 'Установите облегченную версию для iOS по ссылке';
 
-if (confirm("У Вас Android 2015 года выпуска и позже") == true) {
+if (confirm("У Вас Android 2015 года выпуска и позже") === true) {
     console.log(question1);
-} else if (confirm("У Вас iOS 2015 года выпуска и позже") == true) {
+} else if (confirm("У Вас iOS 2015 года выпуска и позже") === true) {
     console.log(question2); 
-} else if (confirm("У Вас Android ранее 2015 года выпуска") == true) {
+} else if (confirm("У Вас Android ранее 2015 года выпуска") === true) {
     console.log(question3);
 } else {
     console.log(question4);
 }
 
 
-//шаблонная строка `some ${value}`: 
+// вариант с confirm 2
+let inf1 = 'Установите версию приложения для Android по ссылке';
+let inf2 = 'Установите версию приложения для iOS по ссылке';
+let inf3 = 'Установите облегченную версию для Android по ссылке';
+let inf4 = 'Установите облегченную версию для iOS по ссылке';
 
-/*варинат с confirm частично - переход через шаг и брейк, если не номер
-let question1 = Number(prompt('Укажите вашу ОС: нажмите "1" для Android и нажмите "0" для iOS'));
-let question2 = 'Установите облегченную версию для Android по ссылке';
-let question3 = 'Установите облегченную версию для iOS по ссылке';
-
-if (question1 === 1 && question2 >= 2015) { 
-    console.log('Установите версию приложения для Android по ссылке');
-} else if (question1 === 0 && question2 >= 2015) {
-    console.log('Установите версию приложения для iOS по ссылке'); 
-} else if (confirm("У Вас Android ранее 2015 года выпуска") == true) {
-    console.log(question2);
+if (confirm("У Вас Android 2015 года выпуска и позже") === true) {
+    console.log(inf1);
+} else if (confirm("У Вас iOS 2015 года выпуска и позже") === true) {
+    console.log(inf2); 
+} else if (confirm("У Вас Android ранее 2015 года выпуска") === true) {
+    console.log(inf3);
+} else if (confirm("У Вас iOS ранее 2015 года выпуска") === true) {
+    console.log(inf4);
 } else {
-    console.log(question3);
+    console.log("Не поддерживается");
 }
-*/
+
+
+// вариант с confirm 3
+let OS = confirm('Тип Вашей OC iOS?');
+let year = prompt('Введите год выпуска Вашего телефона');
+
+if (OS) {
+    if (year < 2015) {
+        console.log('Установите облегченную версию приложения для iOS по ссылке');
+    } else {
+        console.log('Установите версию приложения для iOS по ссылке');
+    } 
+
+} else if (year < 2015) {
+    console.log('Установите облегченную версию приложения для Android по ссылке');
+    } else {
+        console.log('Установите версию приложения для Android по ссылке');
+    } 
+
+
+// вариант с confirm 4
+let OS1 = confirm('Тип вашей OC iOS?');
+let year1 = confirm('Введите год выпуска Вашего телефона');
+
+if (OS1) {
+    if (year1) {
+        console.log('Установите облегченную версию приложения для iOS по ссылке');
+    } else {
+        console.log('Установите версию приложения для iOS по ссылке');
+    } 
+
+} else if (year1) {
+        console.log('Установите облегченную версию приложения для Android по ссылке');
+    } else {
+        console.log('Установите версию приложения для Android по ссылке');
+    } 
+
+
+//шаблонная строка `some ${value}`: 
 
 /* вариант первый === КАК СДЕЛАТЬ ПРАВИЛЬНО???
 let question1 = Number(prompt('Укажите вашу ОС: нажмите "1" для Android и нажмите "0" для iOS'));
