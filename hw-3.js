@@ -201,7 +201,7 @@ if (OS) {
 
 // вариант с confirm 4
 let OS1 = confirm('Тип вашей OC iOS?');
-let year1 = confirm('Введите год выпуска Вашего телефона');
+let year1 = confirm('Ваше устройство было выпущено позже 2015 года?');
 
 if (OS1) {
     if (year1) {
@@ -210,11 +210,13 @@ if (OS1) {
         console.log('Установите версию приложения для iOS по ссылке');
     } 
 
-} else if (year1) {
+} else {
+    if (!year1) {
         console.log('Установите облегченную версию приложения для Android по ссылке');
     } else {
         console.log('Установите версию приложения для Android по ссылке');
     } 
+}
 
 
 //шаблонная строка `some ${value}`: 
