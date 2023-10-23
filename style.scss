@@ -91,6 +91,60 @@
   text-decoration: underline;
 }
 
+.doublebottom {
+  height: 800px;
+  background-color: #000915;
+  display: flex;
+}
+
+.button2:hover {
+  color: #9C0332;
+  background: #FFF;
+}
+
+.h2 {
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.doublebottom-text {
+  padding-top: 32px;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.button2 {
+  border-radius: 30px;
+  background: #9C0332;
+  width: 234px;
+  height: 49px;
+  color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 18px;
+  margin-top: 44px;
+}
+
+.content2 {
+  width: 584px;
+  height: 236px;
+  padding-top: 282px;
+}
+
+.pic {
+  width: 485px;
+  height: 333px;
+  padding-left: 135px;
+  padding-top: 234px;
+}
+
 @import 'mobileversion';
 
 
