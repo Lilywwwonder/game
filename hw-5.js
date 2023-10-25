@@ -1,4 +1,4 @@
-/*//1
+//1
 function min(a, b) {
     if (b < a) {
         return b;
@@ -34,7 +34,6 @@ console.log(check(22));
 
 //3
 //3.1 
-
 function write(number) {
     console.log(Math.pow(number, 2));
 }
@@ -53,7 +52,7 @@ function yourAge() {
     let age = Number(prompt('Сколько Вам лет?')); 
     if (age < 0) {
         console.log('Вы ввели неправильное значение');
-    } else if (age >= 0 & age <= 12) {
+    } else if (age >= 0 && age <= 12) {
         console.log('Привет, друг!');
     } else if (age >= 13) {
         console.log('Добро пожаловать!');
@@ -76,7 +75,7 @@ function check(a, b) {
 console.log(check(3, 5));
 
 
-//6
+//6 первый вариант
 function ask() {
     let question = prompt('Введите число от 0 до 10 включительно');
     if (!isNaN(question)) {
@@ -100,29 +99,7 @@ function ask() {
 
 console.log(ask());
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!не смотреть
-function ask() {
-    let question = prompt('Введите число от 0 до 10 включительно');
-    if (!isNaN(question)) {
-        return `${question} в кубе равняется ${Math.pow(question, 3)}`;
-    } else {
-        return 'Переданный параметр не является числом';
-    }
-}
-
-console.log(ask());
-
-function check() {
-    if (question >= 0 && question <= 10) {
-        console.log('Все ok');
-    } else {
-        console.log('Прочтите уcловия заново');
-    }
-}
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-//7
+//7 Вариант 1
 let circle1 = {
     'radius': 10
 }
@@ -152,25 +129,78 @@ circle2.getPerimeter = function() {
 
 console.log(circle2.getArea());
 console.log(circle2.getPerimeter());
-*/
+
+// Вариант 2
+let circle1 = {
+    'radius': 10,
+    getArea() {
+    return Math.pow(this.radius, 2) * Math.PI;
+},
+getPerimeter () {
+    return 2 * Math.PI * this.radius;
+}
+};
+
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter());
+
+let circle2 = {
+    'radius': 9,
+    getArea() {
+    return Math.pow(this.radius, 2) * Math.PI;
+},
+getPerimeter () {
+    return 2 * Math.PI * this.radius;
+}
+};
+
+console.log(circle2.getArea());
+console.log(circle2.getPerimeter());
+
+// вариант 3
+function getArea () {
+    return Math.pow(this.radius, 2) * Math.PI;
+  }
+
+function getPerimeter () {
+     return 2 * Math.PI * this.radius;
+  }
+
+let circle1 = {
+    'radius': 10,
+    'method1': getArea,
+    'method2': getPerimeter
+}
+
+let circle2 = {
+    'radius': 9,
+    'method1': getArea,
+    'method2': getPerimeter
+}
+
+console.log(circle1.method1());
+console.log(circle1.method2());
+
+console.log(circle2.method1());
+console.log(circle2.method2());
 
 
 //8 done
 function show() {
-    let ask = Number(prompt('Ведите номер месяца от 1 до 12'));
-    if (ask >= 1 || ask <= 2 || ask === 12) {
+    let ask = Number(prompt('Введите номер месяца от 1 до 12'));
+    if (ask >= 1 && ask <= 2 || ask === 12) {
         return 'Зима';
-    } else if (ask >= 3 || ask <= 5) {
-         return 'Весна';
-    } else if (ask >= 6 || ask <= 8) {
+    } else if (ask >= 3 && ask <= 5) {
+        return 'Весна';
+    } else if (ask >= 6 && ask <= 8) {
         return 'Лето';
-    } else if (ask >= 9 || ask <= 11) {
-         return 'Осень';
+    } else if (ask >= 9 && ask <= 11) {
+        return 'Осень';
     } else {
-        return 'Введите номер!'
+        return 'Введите номер!';
     }
 }
 
-
+console.log(show());
 
 
