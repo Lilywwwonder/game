@@ -3,10 +3,10 @@ let randomNum = [1, 5, 4, 10, 0, 3];
 
 
 for (let i = 0; i < randomNum.length; i++) {
-    if (randomNum[i] == 10) {
-        console.log(randomNum[i])
+    console.log(randomNum[i]);
+        if (randomNum[i] === 10) {
         break;
-    } console.log(randomNum[i]);
+    } 
 } 
 
 
@@ -22,22 +22,40 @@ number = number.join(' ');
 
 console.log(number);
 
-//4 выучить, задание сделано
-let extra = [
-    [1, 1, 1],
-    [1, 1, 1],
-    [1, 1, 1]
-];
-
-for (let item of extra) {
-    for (let i = 0; i < item.length; i++) {
-        for (let n = 0; n < item.length; n++) {
-            extra[i][n] = 1;
+//4 выучить, задание сделано 
+let extr = [
+    ['' , '' , ''],
+    ['' , '' , ''],
+    ['' , '' , '']
+    ];
+    
+    for (let item of extr) {
+        for (let i = 0; i < item.length; i++) {
+            for (let n = 0; n < item.length; n++) {
+                extr[i][n] = 1;
+            }
         }
     }
-}
+    
+    console.log(extr);
 
-console.log(extra);
+    /*
+    let extra = [
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1]
+    ];
+    
+    for (let item of extra) {
+        for (let i = 0; i < item.length; i++) {
+            for (let n = 0; n < item.length; n++) {
+                extra[i][n] = 1;
+            }
+        }
+    }
+    
+    console.log(extra);
+*/
 
 //5
 let mas = [1, 1, 1];
@@ -130,13 +148,13 @@ const el = [];
 const elLength = 6;
 sum = 0;
 
-for (let i = 0; i < elLength; i++) {
+for (let i = 1; i < elLength; i++) {
     const randomNum = Math.floor(Math.random() * 11);
         el.push(randomNum);
 }
 
 const getAverage = (el) => {
-    const sum = el.reduce((acc, number) => acc + number, 0);
+    const sum = el.reduce((acc, number) => acc + number, 1);
     return sum / elLength;
 }
 

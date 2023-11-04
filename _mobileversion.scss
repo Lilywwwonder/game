@@ -55,10 +55,12 @@
         display: none;
     }
 
+    //вторая часть
     .doublebottom {
         height: 654px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .content2 {
@@ -85,9 +87,53 @@
         height: 236px;
         padding-left: 0px;
         padding-top: 0px;
+        
     }
 
       .content2-img {
+        width: 100%;
+    }
+
+    //третья часть
+    .triplelebottom {
+        height: 654px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content3 {
+        padding-top: 51px;
+        order: 1;
+    }
+
+    .h3 {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 51px
+    }
+
+    .triplebottom-text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
+        width: 343px;
+        height: 66px;
+    }
+   
+    .pic2 {
+        width: 344px;
+        height: 231px;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 64px;
+        order: 2;
+
+    }
+
+      .content3-img {
         width: 100%;
     }
 

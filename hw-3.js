@@ -82,7 +82,7 @@ if (isNaN(anyNumber)) {
 } else if (anyNumber % 2 === 0) {
     alert('Число четное'); 
 } else {
-        alert('Число нечетное');
+    alert('Число нечетное');
 }
 
 
