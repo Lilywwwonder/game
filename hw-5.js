@@ -1,4 +1,4 @@
-//1
+/*//1
 function min(a, b) {
     if (b < a) {
         return b;
@@ -183,7 +183,7 @@ console.log(circle1.method2());
 
 console.log(circle2.method1());
 console.log(circle2.method2());
-
+*/
 
 //8 done
 function show() {

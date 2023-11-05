@@ -1,4 +1,4 @@
-//1
+/*//1
 let str = 'js';
 console.log(str.toUpperCase());
 
@@ -25,7 +25,8 @@ console.log(Math.min(52, 53, 49, 77, 21, 32));
 //5
 //рандомное число
 function randomNum(min, max) {
-    return Math.random() * (max - min) + min};
+    return Math.floor(Math.random() * (max - min) + min)
+};
 
 console.log(randomNum(1, 10));
 
@@ -40,14 +41,15 @@ console.log(randomNum(1, 10));
 //6
 function get(numInteger) {
     let newArray = []; 
+    let arrayLength = numInteger / 2;
 
-    for (let i = 0; i < numInteger; i++) {
-        let randomArray = Math.round(Math.random() * (numInteger - 0) + 0);
+    for (let i = 0; i < arrayLength; i++) {
+        let randomArray = Math.floor(Math.random() * numInteger) ;
         newArray.push(randomArray);
     } return newArray;
 }
 
-console.log(get(7 / 2));
+console.log(get(7));
 
 //7 
 function enter(min, max) {
@@ -73,8 +75,8 @@ currentDate.setDate(currentDate.getDate() + 73);
 console.log(currentDate);
 
 //10
-const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+"Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 
 const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
     
@@ -83,32 +85,35 @@ let hours = myDate.getHours().toString().padStart(2, '0');
 let minutes = myDate.getMinutes().toString().padStart(2, '0');
 let seconds = myDate.getSeconds().toString().padStart(2, '0');
 
-let fullDate = "Дата:" + myDate.getDate() + 
+let fullDate = "Дата: " + myDate.getDate() + 
 " " + months[myDate.getMonth()] + 
 " " + myDate.getFullYear() + 
-"- это " + days[myDate.getDay()] + ". " +
+" - это " + days[myDate.getDay()] + ". " +
 "Время: " + hours + ":" +
 minutes + ":" + seconds + "."
     
 console.log(fullDate);
+*/
 
 //11
-let list = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 
-'Персик', 'Апельсин', 'Мандарин'];
-list = list.sort(() => Math.random() - 0.5);
-alert(list);
+function show2() {
+    let list = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    list = list.sort(() => Math.random() - 0.5);
+    alert(list);
 
-let q1 = prompt('Чему равнялся первый элемент массива?');
-let q2 = prompt('Чему равнялся последний элемент массива?');
+    let q1 = prompt('Чему равнялся первый элемент массива?');
+    let q2 = prompt('Чему равнялся последний элемент массива?');
 
 
-if (q1.toLowerCase() === list[0].toLowerCase() && q2.toLowerCase() === list[list.length - 1].toLowerCase()) {
-    console.log('Поздравляем! вы угадали!');
-} else if (q1.toLowerCase() === list[0].toLowerCase() || q2.toLowerCase() === list[list.length - 1].toLowerCase()) {
-    console.log('Вы были близки к победе!');
-} else {
-    console.log('К сожалению, вы не угадали');
+    if (q1.toLowerCase() === list[0].toLowerCase() && q2.toLowerCase() === list[list.length - 1].toLowerCase()) {
+        console.log('Поздравляем! вы угадали!');
+    } else if (q1.toLowerCase() === list[0].toLowerCase() || q2.toLowerCase() === list[list.length - 1].toLowerCase()) {
+        console.log('Вы были близки к победе!');
+    } else {
+        console.log('К сожалению, вы не угадали');
+    }
 }
+
 
 
 
