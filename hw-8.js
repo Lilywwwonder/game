@@ -25,16 +25,16 @@ people.sort(function (a, b) {
 console.log(people);
 
 
-//2 задан вопрос, не выводит массив
+//2
 function isPositive(num) {
     if (num > 0) {
         return num;
     }
     }
 
-function isMale(name, gender) {
-    if (gender === 'male') {
-        return name + gender;
+function isMale(person) {
+    if (person.gender === 'male') {
+        return true;
     } 
     }
 
@@ -60,10 +60,10 @@ const people = [
     
 console.log(filter(people, isMale)); 
 
-//3 сделать, чтобы секунды менялись
-let currentDate = new Date(); 
+//3 myDate неизменна, поэтому в консоли надо передать new Date напрямую (чтобы отсчитывалис секунды)
+let myDate = new Date(); 
 let interval = setInterval(() => {
-    console.log(currentDate); 
+    console.log(new Date()); 
 }, 3000);
     
 setTimeout(() => {
@@ -72,12 +72,35 @@ setTimeout(() => {
     
         
 //4
-
-
+function delayForSecond(callback) {
+    setTimeout(function() {
+    callback();
+    }, 1000);
+    }
     
+    delayForSecond(function () {
+    console.log('Привет, Глеб!');
+    })
 
+//5
+// Функция delayForSecond через 1 секунду пишет в консоль «Прошла одна секунда», 
+// а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+				if(cb) { 	cb(); }
 
+    }, 1000)
+}
 
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Нужно изменить код ниже:
+delayForSecond(function () {
+    sayHi('Глеб')});
 
 
 
