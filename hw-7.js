@@ -41,15 +41,16 @@ console.log(randomNum(1, 10));
 //6
 function get(numInteger) {
     let newArray = []; 
-    let arrayLength = numInteger / 2;
+    let arrayLength = Math.floor(numInteger / 2);
 
     for (let i = 0; i < arrayLength; i++) {
-        let randomArray = Math.floor(Math.random() * numInteger) ;
+        let randomArray = Math.floor(Math.random() * numInteger);
         newArray.push(randomArray);
     } return newArray;
 }
 
 console.log(get(7));
+
 
 //7 
 function enter(min, max) {
