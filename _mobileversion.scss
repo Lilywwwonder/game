@@ -1,0 +1,145 @@
+@media (max-width: 767px) {
+
+    .center-size {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top {
+        height: 735px;
+        background-image: url(img/mobile.jpg)
+    }
+
+    .h1 {
+        padding-top: 239px;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .top-text {
+        font-size: 14px;
+        text-align: center;
+        line-height: 22px;
+    }
+
+    .button {
+        margin-top: 33px;
+    }
+
+    .act {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bottom {
+        height: 1221px;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 32px;
+    }
+
+    .content-img {
+        width: 100%;  
+    }
+
+    .g-link {
+        top: 217px;  //правильно ли в макете указаны размеры топа для моб версии?
+        left: 12px;
+    }
+
+    .top-text > br {
+        display: none;
+    }
+
+    //вторая часть
+    .doublebottom {
+        height: 654px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content2 {
+        padding-top: 51px;
+    }
+
+    .h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .doublebottom-text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
+        width: 343px;
+        height: 66px;
+    }
+   
+    .pic {
+        width: 344px;
+        height: 236px;
+        padding-left: 0px;
+        padding-top: 0px;
+        
+    }
+
+      .content2-img {
+        width: 100%;
+    }
+
+    //третья часть
+    .triplelebottom {
+        height: 654px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content3 {
+        padding-top: 51px;
+        order: 1;
+    }
+
+    .h3 {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 51px
+    }
+
+    .triplebottom-text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
+        width: 343px;
+        height: 66px;
+    }
+   
+    .pic2 {
+        width: 344px;
+        height: 231px;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 64px;
+        order: 2;
+
+    }
+
+      .content3-img {
+        width: 100%;
+    }
+
+
+    }
+     
+
+     
+    
